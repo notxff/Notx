@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>FF Redeem Code</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html,
+body{
+    width:100%;
+    min-height:100%;
+    background:#06131c;
+    color:#dbe8ed;
+}
+
+body{
+    font-family:"Arial Narrow",Arial,sans-serif;
+}
+
+.page{
+    width:100%;
+    max-width:514px;
+    min-height:100vh;
+    margin:auto;
+
+    background:
+    linear-gradient(
+        180deg,
+        #07151e 0%,
+        #081a25 55%,
+        #06131c 100%
+    );
+
+    position:relative;
+    overflow:hidden;
+}
+
+.page:before{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    opacity:.16;
+
+    background:
+    repeating-linear-gradient(
+        0deg,
+        transparent 0px,
+        transparent 4px,
+        rgba(255,255,255,.04) 5px
+    );
+}
+
+
+/* =========================
+   TOP
+========================= */
+
+.top{
+    height:475px;
+    padding:48px 16px 0;
+}
+
+.topbar{
+    height:24px;
+
+    display:flex;
+    align-items:center;
+
+    gap:16px;
+
+    color:#a9b7bd;
+
+    font-family:monospace;
+    font-size:11px;
+    letter-spacing:3px;
+}
+
+.num{
+    color:#29bce8;
+}
+
+.line{
+    height:1px;
+    flex:1;
+
+    background:
+    linear-gradient(
+        90deg,
+        #17647a,
+        transparent
+    );
+}
+
+
+/* =========================
+   VIDEO
+========================= */
+
+.video{
+    height:270px;
+
+    margin-top:17px;
+
+    border:3px solid #08b9f1;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:#080c10;
+
+    box-shadow:
+    0 0 25px
+    rgba(8,185,241,.12);
+}
+
+.video video{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    background:#080c10;
+}
+
+.video-label{
+    position:absolute;
+
+    left:18px;
+    top:17px;
+
+    color:#8a989e;
+
+    font-family:monospace;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    pointer-events:none;
+
+    text-shadow:
+    0 1px 3px rgba(0,0,0,.8);
+}
+
+
+/* =========================
+   TICKER
+========================= */
+
+.ticker{
+    height:38px;
+
+    margin-top:34px;
+
+    border-top:
+    1px solid #123b4b;
+
+    border-bottom:
+    1px solid #123b4b;
+
+    overflow:hidden;
+
+    white-space:nowrap;
+
+    font-family:monospace;
+
+    font-size:10px;
+
+    letter-spacing:2.3px;
+
+    padding-top:11px;
+}
+
+.ticker span{
+    display:inline-block;
+
+    animation:
+    tickerMove 15s linear infinite;
+}
+
+@keyframes tickerMove{
+
+    0%{
+        transform:translateX(0);
+    }
+
+    100%{
+        transform:translateX(-45%);
+    }
+
+}
+
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.card{
+
+    margin:0 16px;
+
+    border-left:
+    4px solid #f5c82d;
+
+    padding:
+    25px 24px 38px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0d2b3b,
+        #0d4057
+    );
+
+    min-height:440px;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.card:after{
+
+    content:"";
+
+    position:absolute;
+
+    right:0;
+    top:0;
+
+    border-top:
+    105px solid #14506a;
+
+    border-left:
+    105px solid transparent;
+
+    opacity:.7;
+}
+
+.app{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.icon{
+
+    width:91px;
+    height:91px;
+
+    border-radius:13px;
+
+    object-fit:cover;
+
+    border:
+    2px solid
+    rgba(255,255,255,.12);
+
+    box-shadow:
+    0 8px 25px
+    rgba(0,0,0,.4);
+}
+
+.rating{
+    white-space:nowrap;
+}
+
+.stars{
+
+    font-family:Arial,sans-serif;
+
+    font-size:30px;
+
+    color:#ffe78a;
+
+    letter-spacing:-5px;
+}
+
+.score{
+
+    font-family:monospace;
+
+    font-size:25px;
+
+    color:#edf5f7;
+
+    margin-left:4px;
+}
+
+.share{
+
+    margin-left:auto;
+
+    width:137px;
+    height:50px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #5c7f8e,
+        #6c91a1
+    );
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    color:#edf5f7;
+
+    font-size:14px;
+
+    letter-spacing:2px;
+
+    cursor:pointer;
+}
+
+
+/* =========================
+   GET REDEEM BUTTON
+========================= */
+
+.claim{
+
+    height:71px;
+
+    margin-top:46px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:
+    linear-gradient(
+        90deg,
+        #59c9ee,
+        #b9d98a,
+        #ffc52a
+    );
+
+    color:white;
+
+    font-size:21px;
+
+    letter-spacing:3px;
+
+    font-weight:bold;
+
+    box-shadow:
+    0 0 18px
+    rgba(255,205,45,.25);
+
+    text-shadow:
+    0 2px 5px
+    rgba(0,0,0,.3);
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.claim:active{
+    transform:scale(.98);
+}
+
+
+/* =========================
+   TAGS
+========================= */
+
+.tags{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:25px;
+}
+
+.tag{
+
+    border:
+    1px solid #806d2a;
+
+    padding:
+    6px 10px;
+
+    color:#d7c55b;
+
+    font-family:monospace;
+
+    font-size:11px;
+
+    letter-spacing:1px;
+}
+
+.tag.blue{
+
+    border-color:#1b6583;
+
+    color:#2ba9dd;
+}
+
+h1{
+
+    font-size:30px;
+
+    letter-spacing:3px;
+
+    margin:
+    12px 0 7px;
+
+    color:#e9f1f3;
+
+    font-weight:600;
+}
+
+.sub{
+
+    font-family:monospace;
+
+    font-size:12px;
+
+    line-height:1.8;
+
+    letter-spacing:2px;
+
+    color:#7c909a;
+}
+
+
+/* =========================
+   LIVE COMMENTS
+========================= */
+
+.comments{
+
+    margin:0 16px;
+
+    height:350px;
+
+    padding:
+    20px 16px 0;
+
+    border-bottom:
+    1px solid #153442;
+
+    overflow:hidden;
+}
+
+.head{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    margin-bottom:5px;
+}
+
+.live-dot{
+
+    display:inline-block;
+
+    width:9px;
+    height:9px;
+
+    border-radius:50%;
+
+    background:#28a8d0;
+
+    margin-right:5px;
+
+    box-shadow:
+    0 0 8px #28a8d0;
+
+    animation:
+    livePulse 1.2s infinite;
+}
+
+@keyframes livePulse{
+
+    0%,100%{
+        opacity:1;
+        transform:scale(1);
+    }
+
+    50%{
+        opacity:.45;
+        transform:scale(.75);
+    }
+
+}
+
+.watch{
+
+    font-family:monospace;
+
+    font-size:11px;
+
+    color:#8b9ba3;
+
+    letter-spacing:1px;
+}
+
+#commentList{
+    overflow:hidden;
+}
+
+.comment{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-top:17px;
+
+    animation:
+    commentIn .45s ease;
+}
+
+@keyframes commentIn{
+
+    from{
+        opacity:0;
+        transform:translateY(18px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.avatar{
+
+    width:35px;
+    height:35px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    color:white;
+
+    font-weight:bold;
+
+    flex-shrink:0;
+}
+
+.avatar.a{
+    background:#32b7e4;
+}
+
+.avatar.m{
+    background:#eea900;
+}
+
+.avatar.r{
+    background:#7978df;
+}
+
+.avatar.p{
+    background:#e35b9c;
+}
+
+.avatar.g{
+    background:#54b86a;
+}
+
+.ct{
+
+    font-family:Arial,sans-serif;
+
+    font-size:12px;
+
+    color:#b7c5ca;
+
+    line-height:1.4;
+}
+
+.ct b{
+
+    display:block;
+
+    color:#eef3f4;
+
+    font-size:13px;
+
+    margin-bottom:2px;
+}
+
+.ct small{
+
+    color:#84939a;
+
+    font-weight:normal;
+}
+
+
+/* =========================
+   CLAIMED
+========================= */
+
+.claimed{
+
+    height:58px;
+
+    margin:0 16px;
+
+    border-left:
+    3px solid #087a9e;
+
+    border-right:
+    3px solid #087a9e;
+
+    display:flex;
+
+    align-items:center;
+
+    padding-left:18px;
+
+    font-family:monospace;
+
+    font-size:13px;
+
+    letter-spacing:1.8px;
+
+    color:#c6d0d5;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:10px;
+
+    margin:0 16px;
+
+    padding-top:5px;
+}
+
+.feature{
+
+    height:97px;
+
+    border:
+    1px solid #123b4c;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+}
+
+.fi{
+
+    font-size:22px;
+
+    color:#78d6f4;
+}
+
+.ft{
+
+    font-family:monospace;
+
+    font-size:12px;
+
+    letter-spacing:1.5px;
+
+    margin-top:5px;
+}
+
+.fs{
+
+    font-family:monospace;
+
+    font-size:9px;
+
+    color:#91a3ab;
+
+    margin-top:3px;
+}
+
+
+/* =========================
+   TOAST
+========================= */
+
+.toast{
+
+    position:fixed;
+
+    left:50%;
+    bottom:25px;
+
+    transform:
+    translate(-50%,120px);
+
+    width:
+    calc(100% - 35px);
+
+    max-width:460px;
+
+    padding:
+    15px 18px;
+
+    border:
+    1px solid #23b7e5;
+
+    background:#082433;
+
+    color:#dff8ff;
+
+    text-align:center;
+
+    font-family:monospace;
+
+    font-size:13px;
+
+    letter-spacing:1px;
+
+    opacity:0;
+
+    transition:.35s;
+
+    z-index:100;
+}
+
+.toast.show{
+
+    transform:
+    translate(-50%,0);
+
+    opacity:1;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:430px){
+
+    .top{
+
+        height:410px;
+
+        padding-top:28px;
+    }
+
+    .video{
+
+        height:235px;
+    }
+
+    .card{
+
+        margin:0 14px;
+
+        padding:
+        20px 18px;
+    }
+
+    .icon{
+
+        width:72px;
+        height:72px;
+    }
+
+    .stars{
+
+        font-size:23px;
+    }
+
+    .score{
+
+        font-size:19px;
+    }
+
+    .share{
+
+        width:88px;
+
+        height:44px;
+
+        font-size:11px;
+    }
+
+    .claim{
+
+        margin-top:34px;
+
+        height:62px;
+
+        font-size:18px;
+    }
+
+    .comments{
+
+        margin:0 14px;
+    }
+
+    .claimed{
+
+        margin:0 14px;
+
+        font-size:11px;
+    }
+
+    .features{
+
+        margin:0 14px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<div class="page">
+
+
+<!-- =========================
+     TOP VIDEO
+========================= -->
+
+<section class="top">
+
+
+<div class="topbar">
+
+<span class="num">
+01
+</span>
+
+<span class="line"></span>
+
+<span>
+WATCH FULL VIDEO
+</span>
+
+</div>
+
+
+<div class="video">
+
+    <video
+        id="ffVideo"
+        controls
+        playsinline
+        preload="metadata"
+    >
+
+        <source
+            src="YOUR_GITHUB_VIDEO_URL"
+            type="video/mp4"
+        >
+
+        Your browser does not support HTML5 video.
+
+    </video>
+
+
+    <div class="video-label">
+        FF • VDO • 2026
+    </div>
+
+</div>
+
+
+<div class="ticker">
+
+<span>
+
+ROHAN - CLAIMED REDEEM CODE
+
+&nbsp;&nbsp;&nbsp;&nbsp; — &nbsp;&nbsp;&nbsp;&nbsp;
+
+KARAN - CLAIMED REDEEM CODE
+
+&nbsp;&nbsp;&nbsp;&nbsp; — &nbsp;&nbsp;&nbsp;&nbsp;
+
+ROHAN - CLAIMED REDEEM CODE
+
+&nbsp;&nbsp;&nbsp;&nbsp; — &nbsp;&nbsp;&nbsp;&nbsp;
+
+KARAN - CLAIMED REDEEM CODE
+
+</span>
+
+</div>
+
+
+</section>
+
+
+
+<!-- =========================
+     REDEEM CARD
+========================= -->
+
+<section class="card">
+
+
+<div class="app">
+
+
+<img
+class="icon"
+src="https://i.imgur.com/placeholder.jpg"
+alt="App"
+>
+
+
+<div class="rating">
+
+<span class="stars">
+★★★★★
+</span>
+
+<span class="score">
+4.9
+</span>
+
+</div>
+
+
+<div
+class="share"
+onclick="sharePage()"
+>
+
+⤴️ &nbsp; SHARE
+
+</div>
+
+
+</div>
+
+
+
+<!-- GET REDEEM CODE -->
+
+<div
+class="claim"
+id="claimButton"
+onclick="claimCode()"
+>
+
+GET REDEEM CODE
+
+</div>
+
+
+
+<div class="tags">
+
+<span class="tag">
+✓ VERIFIED
+</span>
+
+<span class="tag blue">
+MOST TRUSTED
+</span>
+
+</div>
+
+
+
+<h1>
+REDEEM CODE
+</h1>
+
+
+<div class="sub">
+
+FREE FIRE REDEEM CODE
+
+<br>
+
+UNLIMITED ACCESS • NO BAN
+
+</div>
+
+
+</section>
+
+
+
+<!-- =========================
+     LIVE COMMENTS
+========================= -->
+
+<section class="comments">
+
+
+<div class="head">
+
+
+<span>
+
+<span class="live-dot"></span>
+
+Live Comments
+
+</span>
+
+
+<span
+class="watch"
+id="watching"
+>
+
+1,284 WATCHING
+
+</span>
+
+
+</div>
+
+
+
+<div id="commentList">
+
+
+<div class="comment">
+
+<span class="avatar a">
+A
+</span>
+
+<span class="ct">
+
+<b>
+Ankit
+<small>now</small>
+</b>
+
+claimed redeem code
+
+</span>
+
+</div>
+
+
+
+<div class="comment">
+
+<span class="avatar m">
+M
+</span>
+
+<span class="ct">
+
+<b>
+ManishX27
+<small>now</small>
+</b>
+
+finally claimed redeem code
+
+</span>
+
+</div>
+
+
+
+<div class="comment">
+
+<span class="avatar r">
+R
+</span>
+
+<span class="ct">
+
+<b>
+Ravi
+<small>now</small>
+</b>
+
+claimed redeem code
+
+</span>
+
+</div>
+
+
+
+<div class="comment">
+
+<span class="avatar m">
+A
+</span>
+
+<span class="ct">
+
+<b>
+Aarav
+<small>now</small>
+</b>
+
+just claimed redeem code
+
+</span>
+
+</div>
+
+
+
+<div class="comment">
+
+<span class="avatar a">
+R
+</span>
+
+<span class="ct">
+
+<b>
+Ritesh
+<small>now</small>
+</b>
+
+verified — claimed redeem code
+
+</span>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- =========================
+     CLAIMED COUNTER
+========================= -->
+
+<div class="claimed">
+
+97,486 REDEEM CODES CLAIMED IN LAST HOUR
+
+</div>
+
+
+
+<!-- =========================
+     FEATURES
+========================= -->
+
+<section class="features">
+
+
+<div class="feature">
+
+<div class="fi">
+♢
+</div>
+
+<div class="ft">
+VIRUS
+</div>
+
+<div class="fs">
+FREE
+</div>
+
+</div>
+
+
+
+<div class="feature">
+
+<div class="fi">
+⚡
+</div>
+
+<div class="ft">
+FAST
+</div>
+
+<div class="fs">
+INSTALL
+</div>
+
+</div>
+
+
+
+<div class="feature">
+
+<div class="fi">
+♟
+</div>
+
+<div class="ft">
+78K+
+</div>
+
+<div class="fs">
+USERS
+</div>
+
+</div>
+
+
+</section>
+
+
+</div>
+
+
+
+<!-- TOAST -->
+
+<div
+class="toast"
+id="toast"
+></div>
+
+
+
+<script>
+
+
+/* =========================
+   LIVE COMMENTS
+========================= */
+
+const demoComments = [
+
+["A","a","Ankit","claimed redeem code"],
+
+["M","m","ManishX27","finally claimed redeem code"],
+
+["R","r","Ravi","claimed redeem code"],
+
+["A","m","Aarav","just claimed redeem code"],
+
+["R","a","Ritesh","verified — claimed redeem code"],
+
+["V","p","VickyFF","code mil gaya 🔥"],
+
+["S","g","Sahil","finally got it bro"],
+
+["N","a","Naman","redeem code claimed"],
+
+["K","r","Karan","working perfectly 🔥"],
+
+["D","m","Dev","claimed successfully"],
+
+["R","p","Rohan","thank you bro ❤️"],
+
+["A","g","Aman","got the code"],
+
+["Y","a","Yash","finally claimed it"],
+
+["P","r","Piyush","working 🔥"],
+
+["G","g","Gaurav","code working bro"],
+
+["T","a","Tushar","claimed successfully"]
+
+];
+
+
+let commentIndex = 5;
+
+
+const commentList =
+document.getElementById(
+"commentList"
+);
+
+
+function addLiveComment(){
+
+    const data =
+    demoComments[
+        commentIndex %
+        demoComments.length
+    ];
+
+    commentIndex++;
+
+    const comment =
+    document.createElement("div");
+
+    comment.className =
+    "comment";
+
+    comment.innerHTML = `
+
+    <span class="avatar ${data[1]}">
+
+        ${data[0]}
+
+    </span>
+
+    <span class="ct">
+
+        <b>
+
+            ${data[2]}
+
+            <small>
+                now
+            </small>
+
+        </b>
+
+        ${data[3]}
+
+    </span>
+
+    `;
+
+    commentList.prepend(
+        comment
+    );
+
+    while(
+        commentList.children.length > 5
+    ){
+
+        commentList
+        .lastElementChild
+        .remove();
+
+    }
+
+}
+
+
+/* New comment every 2.5 sec */
+
+setInterval(
+    addLiveComment,
+    2500
+);
+
+
+
+/* =========================
+   WATCHING NUMBER
+========================= */
+
+let watching = 1284;
+
+
+function updateWatching(){
+
+    const change =
+    Math.floor(
+        Math.random() * 9
+    ) - 4;
+
+    watching += change;
+
+    if(watching < 1200){
+        watching = 1200;
+    }
+
+    if(watching > 1399){
+        watching = 1399;
+    }
+
+    document
+    .getElementById("watching")
+    .innerText =
+    watching.toLocaleString()
+    +
+    " WATCHING";
+
+}
+
+
+setInterval(
+    updateWatching,
+    3000
+);
+
+
+
+/* =========================
+   GET REDEEM CODE
+========================= */
+
+function claimCode(){
+
+    /*
+       YAHAN APNA OFFER LINK DAALO
+    */
+
+    const offerLink =
+    "https://glmd.site/click/6aa3943472b8dd685377f27a/6aa385d172b8dd685377e050";
+
+
+    if(
+        offerLink ===
+        "https://glmd.site/click/6aa3943472b8dd685377f27a/6aa385d172b8dd685377e050"
+    ){
+
+        showToast(
+            "Please add your offer link first."
+        );
+
+        return;
+    }
+
+
+    window.open(
+        offerLink,
+        "_blank"
+    );
+
+}
+
+
+
+/* =========================
+   SHARE
+========================= */
+
+async function sharePage(){
+
+    const shareData = {
+
+        title:
+        "FF Redeem Code",
+
+        text:
+        "Check this redeem code page!",
+
+        url:
+        window.location.href
+
+    };
+
+
+    try{
+
+        if(navigator.share){
+
+            await navigator.share(
+                shareData
+            );
+
+        }else{
+
+            await navigator.clipboard.writeText(
+                window.location.href
+            );
+
+            showToast(
+                "Page link copied!"
+            );
+
+        }
+
+    }catch(error){
+
+        console.log(error);
+
+    }
+
+}
+
+
+
+/* =========================
+   TOAST
+========================= */
+
+let toastTimer;
+
+
+function showToast(message){
+
+    const toast =
+    document.getElementById(
+        "toast"
+    );
+
+    toast.innerText =
+    message;
+
+    toast.classList.add(
+        "show"
+    );
+
+    clearTimeout(
+        toastTimer
+    );
+
+    toastTimer =
+    setTimeout(
+
+        function(){
+
+            toast.classList.remove(
+                "show"
+            );
+
+        },
+
+        2500
+
+    );
+
+}
+
+</script>
+
+
+</body>
+
+</html>
